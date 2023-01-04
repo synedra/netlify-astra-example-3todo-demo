@@ -131,6 +131,7 @@ Notice the clipboard icon at the end of each value.
  * In the repository directory run the following command to set up your Astra DB environment. This will verify the database you created earlier or create a new one for you if it can't find your database.
  ```
  astra setup
+ astra db create-dotenv -k todos netlify
 ```
 
 ### 8. Launch your app
