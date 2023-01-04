@@ -10,9 +10,8 @@ tasks:
       npm install -g netlify-cli
       npm install
     command: |
-      source /home/gitpod/.astra/cli/astra-init.sh
-      echo -e "\n\n   *** Astra DB Netflix Clone READY ... Let's go ! ***\n"
       gp open README.md
+      astra setup
 ports:
   - port: 8080 # Application
     onOpen: ignore
