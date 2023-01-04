@@ -1,11 +1,16 @@
 image: gitpod/workspace-full
 tasks:
-  - before: |
-    curl -Ls "https://dtsx.io/get-astra-cli" | bash
-    npm install -g netlify-cli
-  - init: npm install
-    command:  astra setup
-    name: Setup script
+before: |
+      cd /workspace/workshop-graphql-netflix
+      curl -Ls "https://dtsx.io/get-astra-cli" | bash >> ./install.log
+      printf 'export PATH="$HOME%s:$PATH"\n' "/.astra/cli" >> $HOME/.bashrc
+      printf 'unset JAVA_TOOL_OPTIONS\n' >> $HOME/.bashrc
+      nvm install 16.13.0
+      npm install -g npm@latest
+      npm install -g netlify-cli
+      npm install
+command: |
+      astra setup
 ports:
   - port: 8080 # Application
     onOpen: ignore
