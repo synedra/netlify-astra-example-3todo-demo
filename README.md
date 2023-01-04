@@ -8,7 +8,7 @@ This is an example React To-Do application using a [DataStax Astra](https://astr
 ![image](https://monosnap.com/image/Fv0yPAznbeNJD3vYlQfztME6yogzFT)
 
 ## Objectives
-* Provide a fullstack development example using Astra as the storage backend
+* Provide a fullstack development example using Astra as the storage backendup
 
 ## How this works
 Once the Astra credentials are provided, the necessary tables are created in the database. The webservice will be available on port 8080 once the application has been deployed.
@@ -130,30 +130,8 @@ Notice the clipboard icon at the end of each value.
 ### 7. Configure and connect database
  * In the repository directory run the following command to set up your Astra DB environment. This will verify the database you created earlier or create a new one for you if it can't find your database.
  ```
- npm exec astra-setup tiktok_workshop_db tiktok_keyspace
+ astra setup
 ```
-
-<details>
-<summary>What does astra-setup do?</summary>
-    To setup your ASTRA instance, you want to run `npm exec astra-setup`
-
-    This will do the following:
-    * Have you go to your [Astra DB instance](https://datastx.io/workshops) to register or login. There is no credit card required to sign up. The 'Pay as you go' option gives you a huge amount of transactions for free:
-        * 30 million reads
-        * 5 million writes
-        * 40 gigabytes of storage
-    * Give steps to grab a Database Administrator Token and paste it into the input field
-    * Ask you what database you want to use (default, existing, create)
-    * Create or access the database
-    * Create/update an .env file in the project root
-    * Create/update an .astrarc file in your home directory
-        * This can be used by httpie-astra `pip3 install httpie-astra`
-        * It can also be used by the @astra/collections and @astra/rest node modules
-
-    ## Specify the database and keyspace
-    You can run the script and tell it which database/keyspace to use by using:
-    `npm exec astra-setup databasename keyspacename`
-</details>
 
 ### 8. Launch your app
   * Run the application 
