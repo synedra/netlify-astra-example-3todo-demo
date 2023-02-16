@@ -44,10 +44,7 @@ Follow the instructions below to get started.
 ### 3. Launch GitPod IDE
 - Click the button to launch the GitPod IDE from **YOUR** repository.
 
- * Ok, I've got it, just give me the button already
- * <details>
-     [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
-   </details>
+  [Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)(https://gitpod.io/from-referrer/)
    
 ### 4. Generate application token to securely connect to the database
 
